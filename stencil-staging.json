@@ -1,6 +1,6 @@
 {
-  "name": "Substrate Stencil",
-  "id": "stencil_network",
+  "name": "Substrate SR3",
+  "id": "SR3_network",
   "chainType": "Live",
   "bootNodes": [
     "/ip4/127.0.0.1/tcp/30333/p2p/12D3KooWKiKPo9TLGGbwD5gADh9jGUe7RY9q1VWRJE6E1R1JfqRz"
