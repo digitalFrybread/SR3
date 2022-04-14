@@ -153,10 +153,10 @@ pub fn staging_network_config() -> ChainSpec {
 			TelemetryEndpoints::new(vec![(STAGING_TELEMETRY_URL.to_string(), 0)])
 				.expect("Staging telemetry url is valid; qed"),
 		),
-		None,
-		None,
-		None,
-		Default::default(),
+		Some(DEFAULT_PROTOCOL_ID),
+        Some(subsocial_properties()),
+        Default::default(),
+    )),
 	)
 }
 
@@ -340,5 +340,15 @@ fn testnet_genesis(
 			key: Some(root_key),
 		},
 		transaction_payment: Default::default(),
+	}
+
+	pub fn SR3_properties() -> Properties {
+		let mut properties = Properties::new();
+	
+		properties.insert("ss58Format".into(), 28.into());
+		properties.insert("tokenDecimals".into(), 12.into());
+		properties.insert("tokenSymbol".into(), "SR3".into());
+	
+		properties
 	}
 }
